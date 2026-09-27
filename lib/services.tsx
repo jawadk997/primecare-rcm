@@ -179,22 +179,5 @@ export const services: ServiceDefinition[] = [
       </svg>
     ),
   },
-  {
-    title: 'ICU',
-    slug: 'icu',
-    description:
-      'We have the track record with the best possible approach and solutions for any Intensive Care Units (ICU) and Critical Care Units to deliver revenue outcomes they may have never expected.',
-    details:
-      'Our ICU solutions combine tight clinical documentation review, specialized billing policies, and rapid escalation to capture critical care revenue accurately.',
-    icon: (
-      <svg viewBox="0 0 64 64" {...iconProps}>
-        <circle cx="22" cy="22" r="6" />
-        <circle cx="42" cy="22" r="6" />
-        <circle cx="32" cy="42" r="6" />
-        <path d="M22 28l10 8 10-8" />
-        <path d="M32 14v8" />
-        <path d="M32 46v8" />
-      </svg>
-    ),
-  },
+
 ];

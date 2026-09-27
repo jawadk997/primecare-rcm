@@ -14,7 +14,6 @@ const navItems = [
   { label: 'Why Choose Us', href: '/why-choose-us' },
   { label: 'Pricing', href: '/about#pricing' },
   { label: 'Careers', href: '/about#careers' },
-  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -78,9 +77,6 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link href="/contact" className="ml-4 inline-flex items-center rounded-full bg-teal px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[var(--teal-hover)]">
-            Contact Us
-          </Link>
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
@@ -126,7 +122,6 @@ export default function Navbar() {
           </div>
           <div className="mt-4 flex flex-col gap-3 border-t border-[var(--line)] pt-4">
             <a href="tel:+923024133179" className="font-body text-sm text-[var(--navy)] hover:text-[var(--teal)]">+92-302-4133179</a>
-            <a href="mailto:info@PrimeCareRMCSolutions.com" className="font-body text-sm text-[var(--navy)] hover:text-[var(--teal)]">info@PrimeCareRMCSolutions.com</a>
           </div>
         </div>
       </motion.div>

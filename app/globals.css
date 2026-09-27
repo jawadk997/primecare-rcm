@@ -6,6 +6,8 @@
   color-scheme: light;
   font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
   scroll-behavior: smooth;
+  --font-playfair: 'Georgia', 'Times New Roman', serif;
+  --font-nunito: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --bg-soft: #f8fafc;
   --bg-panel: #ffffff;
   --bg-soft-strong: #f4f8fa;

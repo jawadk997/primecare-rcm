@@ -14,6 +14,7 @@ const values = [
 const team = [
   { name: 'M. Afnan', role: 'Founder & Head of Strategy' },
   { name: 'Asim Peerzada', role: 'Operations Director' },
+  { name: 'Muhammad Usman', role: 'General Manager RCM' },
 ];
 
 export default function AboutPage() {
@@ -59,15 +60,55 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section id="pricing" className="mx-auto max-w-7xl px-0 pt-16 sm:px-0">
+        <div className="glass-panel-strong rounded-[2rem] border border-[var(--line)] bg-[var(--bg-panel)] p-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Pricing</p>
+          <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)]">Flexible, transparent support for growing practices.</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-soft)] p-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-[var(--teal)]">Starter</p>
+              <p className="mt-4 text-3xl font-semibold text-[var(--navy)]">Custom</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-muted)]">Ideal for smaller clinics that need dependable billing support without extra overhead.</p>
+            </div>
+            <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-soft)] p-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-[var(--teal)]">Growth</p>
+              <p className="mt-4 text-3xl font-semibold text-[var(--navy)]">Custom</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-muted)]">Designed for providers scaling volume, complexity, and claim management across multiple workflows.</p>
+            </div>
+            <div className="rounded-3xl border border-[var(--line)] bg-[var(--bg-soft)] p-6">
+              <p className="text-sm uppercase tracking-[0.3em] text-[var(--teal)]">Enterprise</p>
+              <p className="mt-4 text-3xl font-semibold text-[var(--navy)]">Custom</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-muted)]">Comprehensive support for larger teams requiring operational oversight, analytics, and process optimization.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="careers" className="mx-auto max-w-7xl px-0 pt-16 sm:px-0">
+        <div className="glass-panel rounded-[2rem] border border-[var(--line)] bg-[var(--bg-panel)] p-10">
+          <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Careers</p>
+          <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)]">Join a team built for accuracy, accountability, and growth.</h2>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--text-muted)]">
+            We are always looking for driven professionals in medical billing, coding, denial management, and revenue operations who want to make a meaningful impact for US healthcare practices.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Medical Coding</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">AR Follow-Up</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Denial Management</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Operations</span>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-7xl px-0 pt-16 sm:px-0">
         <div className="glass-panel-strong flex flex-col gap-8 rounded-[2rem] border-[var(--line)] bg-[var(--bg-panel)] p-10 text-center lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Presented by</p>
             <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)]">PrimeCare RCM Solutions is presented by M. Afnan.</h2>
           </div>
-          <Link href="/contact" className="button-teal">
-            Talk With Our Team
-          </Link>
+          <a href="tel:+923024133179" className="button-teal">
+            Call Now
+          </a>
         </div>
       </section>
     </main>

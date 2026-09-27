@@ -13,7 +13,6 @@ import { services } from '@/lib/services';
 const specialties = [
   { title: 'Family Practice', icon: Users, description: 'Comprehensive billing for primary care visits, preventive services, and chronic disease management.' },
   { title: 'Internal Medicine', icon: ShieldCheck, description: 'Accurate coding and claims for complex internal medicine procedures and evaluations.' },
-  { title: 'ICU', icon: HeartHandshake, description: 'Specialized RCM for Intensive Care and Critical Care Units with complex charge capture.' },
   { title: 'Orthopedics', icon: CalendarCheck, description: 'Precise coding for surgical and non-surgical orthopedic procedures and follow-ups.' },
   { title: 'Emergency Room', icon: Zap, description: 'Fast-turnaround billing for freestanding ERs and micro-hospitals, 24/7.' },
   { title: 'Cardiology', icon: BarChart3, description: 'Expert coding for cardiac procedures, diagnostics, and interventional cardiology.' },
@@ -72,9 +71,9 @@ export default function HomePage() {
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="mt-8 flex gap-4">
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white">
-                  Get Free Evaluation
-                </Link>
+                <a href="tel:+923024133179" className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white">
+                  Call Now
+                </a>
                 <a href="#services" className="inline-flex items-center justify-center rounded-full border border-white px-6 py-3 text-sm font-semibold text-white">
                   Our Services
                 </a>
@@ -208,9 +207,9 @@ export default function HomePage() {
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Ready to Increase Your Revenue?</p>
             <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)] sm:text-4xl">Partner with a trusted medical billing team.</h2>
           </div>
-          <Link href="/contact" className="button-teal">
-            Contact Us Today
-          </Link>
+          <a href="tel:+923024133179" className="button-teal">
+            Call Now
+          </a>
         </div>
       </section>
     </main>

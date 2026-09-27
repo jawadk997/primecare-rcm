@@ -6,7 +6,6 @@ const footerLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Why Choose Us', href: '/why-choose-us' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
@@ -27,8 +26,6 @@ export default function Footer() {
           </p>
           <div className="space-y-2 text-sm text-slate-300">
             <p className="font-body">Phone: <a href="tel:+923024133179" className="text-[var(--teal)]">+92-302-4133179</a></p>
-            <p className="font-body">Email: <a href="mailto:info@PrimeCareRMCSolutions.com" className="text-[var(--teal)]">info@PrimeCareRMCSolutions.com</a></p>
-            <p className="font-body">Website: <a href="https://www.PrimeCareRMCSolutions.com" className="text-[var(--teal)]" target="_blank" rel="noreferrer">www.PrimeCareRMCSolutions.com</a></p>
           </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
