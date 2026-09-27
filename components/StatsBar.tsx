@@ -38,11 +38,11 @@ function AnimatedStat({ value, label, suffix }: StatItem) {
 
   return (
     <div ref={ref} className="glass-panel flex min-w-[180px] flex-1 flex-col gap-3 p-6 text-center">
-      <p className="text-4xl font-semibold text-white">
+      <p className="text-4xl font-semibold text-[var(--navy)]">
         {count}
-        <span className="text-teal">{suffix}</span>
+        <span className="text-[var(--teal)]">{suffix}</span>
       </p>
-      <p className="text-sm leading-6 text-slate-300">{label}</p>
+      <p className="text-sm leading-6 text-[var(--text-muted)]">{label}</p>
     </div>
   );
 }

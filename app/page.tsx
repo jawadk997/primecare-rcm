@@ -41,7 +41,7 @@ const processSteps = [
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="bg-[var(--bg-soft)]">
       <section id="top" className="relative min-h-screen w-full overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center">
@@ -53,7 +53,7 @@ export default function HomePage() {
             }}
             className="absolute inset-0"
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,22,40,0.85) 40%, rgba(10,22,40,0.3) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(16,35,63,0.82) 38%, rgba(16,35,63,0.35) 100%)' }} />
         </div>
 
         <div className="relative z-10 flex min-h-screen items-center">
@@ -92,11 +92,11 @@ export default function HomePage() {
 
       <StatsBar />
 
-      <section id="services" className="bg-navy px-6 py-16 text-center sm:px-8">
+      <section id="services" className="bg-[var(--bg-soft)] px-6 py-16 text-center sm:px-8">
         <div className="mx-auto max-w-3xl">
           <p className="font-body text-sm uppercase tracking-[0.3em] text-teal">OUR SERVICES</p>
-          <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight text-white sm:text-4xl">Complete Revenue Cycle Management Solutions</h2>
-          <p className="mt-4 font-body text-sm leading-7 text-slate-300">From credentialing to payment posting — we handle every step of your billing workflow.</p>
+          <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight text-[var(--navy)] sm:text-4xl">Complete Revenue Cycle Management Solutions</h2>
+          <p className="mt-4 font-body text-sm leading-7 text-[var(--text-muted)]">From credentialing to payment posting — we handle every step of your billing workflow.</p>
           <div className="mx-auto mt-4 h-1 w-24 rounded bg-teal" />
         </div>
 
@@ -111,22 +111,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="specialties" className="bg-navy px-6 py-16 sm:px-8">
+      <section id="specialties" className="bg-[var(--bg-soft)] px-6 py-16 sm:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 text-center">
             <p className="font-body text-sm uppercase tracking-[0.3em] text-teal">Specialties</p>
-            <h2 className="mt-3 font-heading text-2xl font-semibold text-white">Care & Expertise by Specialty</h2>
+            <h2 className="mt-3 font-heading text-2xl font-semibold text-[var(--navy)]">Care & Expertise by Specialty</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {specialties.map((item, index) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.07 }} className="rounded-[16px] border border-[rgba(13,148,136,0.25)] bg-[#0F2236] p-6 hover:shadow-[0_0_30px_rgba(13,148,136,0.12)] transition">
+              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.07 }} className="rounded-[1.5rem] border border-[var(--line)] bg-white p-6 shadow-[var(--shadow-soft)] transition hover:-translate-y-1 hover:shadow-[0_14px_28px_rgba(16,35,63,0.08)]">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-teal/5 text-teal">
-                    <item.icon className="h-6 w-6 text-teal" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-[var(--teal-soft)] text-[var(--teal)]">
+                    <item.icon className="h-6 w-6 text-[var(--teal)]" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-white">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-[#94A3B8]">{item.description ?? 'Focused coding, billing, and claims work for your specialty.'}</p>
+                    <h3 className="font-heading text-lg font-semibold text-[var(--navy)]">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-[var(--text-muted)]">{item.description ?? 'Focused coding, billing, and claims work for your specialty.'}</p>
                   </div>
                 </div>
               </motion.div>
@@ -140,8 +140,8 @@ export default function HomePage() {
         <div className="grid gap-6 lg:grid-cols-3">
           {benefits.map((item, index) => (
             <motion.div key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.08 }} className="glass-panel p-8">
-              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-4 text-sm leading-6 text-slate-300">{item.description}</p>
+              <h3 className="text-xl font-semibold text-[var(--navy)]">{item.title}</h3>
+              <p className="mt-4 text-sm leading-6 text-[var(--text-muted)]">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -152,33 +152,33 @@ export default function HomePage() {
         <ProcessFlow steps={processSteps} />
       </section>
 
-      <section className="border-t border-white/10 bg-navy/80 px-6 py-16 sm:px-8">
+      <section className="border-t border-[var(--line)] bg-[var(--bg-soft-strong)] px-6 py-16 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <SectionHeading title="Compliance & Security" description="HIPAA-grade controls and US billing compliance built into every engagement." />
-            <ul className="space-y-4 text-slate-300">
+            <ul className="space-y-4 text-[var(--text-muted)]">
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-teal/10 text-teal">✓</span>
+                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-[var(--teal-soft)] text-[var(--teal)]">✓</span>
                 <span>Encrypted servers, secure user access, and protected PHI handling.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-teal/10 text-teal">✓</span>
+                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-[var(--teal-soft)] text-[var(--teal)]">✓</span>
                 <span>Regular quality reviews, denial audits, and compliance reporting.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-teal/10 text-teal">✓</span>
+                <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-[var(--teal-soft)] text-[var(--teal)]">✓</span>
                 <span>US billing regulation alignment, payer requirements, and HIPAA safeguards.</span>
               </li>
             </ul>
           </div>
           <div className="glass-panel p-8">
-            <div className="rounded-3xl border border-white/10 bg-navy/70 p-7">
+            <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--bg-soft-strong)] p-7">
               <div className="flex items-center gap-4">
-                <ShieldCheck className="h-6 w-6 text-teal" />
-                <span className="text-sm uppercase tracking-[0.35em] text-teal/90">Secure data</span>
+                <ShieldCheck className="h-6 w-6 text-[var(--teal)]" />
+                <span className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Secure data</span>
               </div>
-              <p className="mt-4 text-lg font-semibold text-white">Protected systems and controlled access for every client account.</p>
-              <p className="mt-3 text-sm leading-6 text-slate-300">We ensure security and compliance are enforced from intake to reimbursement.</p>
+              <p className="mt-4 text-lg font-semibold text-[var(--navy)]">Protected systems and controlled access for every client account.</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-muted)]">We ensure security and compliance are enforced from intake to reimbursement.</p>
             </div>
           </div>
         </div>
@@ -194,19 +194,19 @@ export default function HomePage() {
             { title: 'Continuous Monitoring & Support', description: 'Ongoing revenue performance and dedicated account support.' },
           ].map((item, index) => (
             <motion.div key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.45, delay: index * 0.08 }} className="glass-panel p-8">
-              <p className="text-sm uppercase tracking-[0.35em] text-teal/90">Step {index + 1}</p>
-              <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-300">{item.description}</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Step {index + 1}</p>
+              <h3 className="mt-4 text-xl font-semibold text-[var(--navy)]">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-muted)]">{item.description}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24 sm:px-8">
-        <div className="glass-panel-strong flex flex-col items-center justify-between gap-6 rounded-[2rem] border-teal/20 bg-navy/90 p-12 text-center sm:flex-row sm:text-left">
+        <div className="glass-panel-strong flex flex-col items-center justify-between gap-6 rounded-[2rem] border-[var(--line)] bg-[var(--bg-panel)] p-12 text-center sm:flex-row sm:text-left">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-teal/90">Ready to Increase Your Revenue?</p>
-            <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Partner with a trusted medical billing team.</h2>
+            <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Ready to Increase Your Revenue?</p>
+            <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)] sm:text-4xl">Partner with a trusted medical billing team.</h2>
           </div>
           <Link href="/contact" className="button-teal">
             Contact Us Today

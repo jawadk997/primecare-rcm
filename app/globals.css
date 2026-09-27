@@ -3,9 +3,20 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
   scroll-behavior: smooth;
+  --bg-soft: #f8fafc;
+  --bg-panel: #ffffff;
+  --bg-soft-strong: #f4f8fa;
+  --navy: #10233f;
+  --navy-soft: #1e3a5f;
+  --text-muted: #64748b;
+  --line: #dce7ee;
+  --teal: #0f9f9a;
+  --teal-hover: #087f7b;
+  --teal-soft: #e8f7f6;
+  --shadow-soft: 0 12px 28px rgba(16, 35, 63, 0.08);
 }
 
 @layer base {
@@ -50,12 +61,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(13, 148, 136, 0.16), transparent 20%), linear-gradient(180deg, #090F1A 0%, #07101F 100%);
+  background: var(--bg-soft);
+  color: var(--navy);
 }
 
 ::selection {
-  background: rgba(13, 148, 136, 0.35);
-  color: white;
+  background: rgba(15, 159, 154, 0.18);
+  color: var(--navy);
 }
 
 section {
@@ -68,19 +80,20 @@ img {
 }
 
 .button-teal {
-  @apply inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white shadow-glow transition duration-300 ease-out hover:bg-teal-500 hover:shadow-none;
+  @apply inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white transition duration-300 ease-out hover:bg-teal-600;
+  box-shadow: none;
 }
 
 .glass-panel {
-  @apply rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl;
+  @apply rounded-[1.5rem] border border-[var(--line)] bg-[var(--bg-panel)] p-6 shadow-[var(--shadow-soft)];
 }
 
 .glass-panel-strong {
-  @apply rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-xl backdrop-blur-2xl;
+  @apply rounded-[1.75rem] border border-[var(--line)] bg-[var(--bg-panel)] p-8 shadow-[var(--shadow-soft)];
 }
 
 .section-heading {
-  @apply text-slate-100;
+  @apply text-[var(--navy)];
 }
 
 @media (max-width: 768px) {

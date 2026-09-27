@@ -10,18 +10,18 @@ const config: Config = {
         sans: ['var(--font-nunito)', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 20px 60px rgba(13, 148, 136, 0.18)',
+        glow: '0 12px 28px rgba(15, 159, 154, 0.12)',
       },
       colors: {
         navy: {
-          DEFAULT: '#0A1628',
-          950: '#050B13',
-          900: '#0A1628',
-          800: '#13223D',
+          DEFAULT: '#10233F',
+          950: '#081425',
+          900: '#10233F',
+          800: '#1A2E4A',
         },
         teal: {
-          DEFAULT: '#0D9488',
-          600: '#0F9F96',
+          DEFAULT: '#0F9F9A',
+          600: '#0A8E8A',
           500: '#14B8A6',
         },
       },

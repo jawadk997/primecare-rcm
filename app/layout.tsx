@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${playfair.variable} ${nunito.variable}`}>
-      <body className="min-h-screen bg-navy text-slate-100 antialiased font-body">
+      <body className="min-h-screen bg-[var(--bg-soft)] text-[var(--navy)] antialiased font-body">
         <div className="relative overflow-hidden">
           <Navbar />
           {children}

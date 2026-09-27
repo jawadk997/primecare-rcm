@@ -11,13 +11,13 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-navy/95 py-14">
+    <footer className="border-t border-[var(--line)] bg-[var(--navy)] py-14 text-white">
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 sm:px-8 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-xl space-y-6">
           <div className="flex items-center gap-4">
             <Image src="/logo.png" alt="PrimeCare RCM logo" width={50} height={50} className="rounded-2xl bg-white/5 p-2" />
             <div>
-              <p className="font-body text-sm uppercase tracking-[0.35em] text-teal/90">PrimeCare RCM Solutions</p>
+              <p className="font-body text-sm uppercase tracking-[0.35em] text-[var(--teal)]">PrimeCare RCM Solutions</p>
               <p className="font-heading text-base font-semibold text-white">US Medical Billing & RCM</p>
             </div>
           </div>
@@ -26,20 +26,20 @@ export default function Footer() {
             and global billing expertise.
           </p>
           <div className="space-y-2 text-sm text-slate-300">
-            <p className="font-body">Phone: <a href="tel:+923024133179" className="text-teal">+92-302-4133179</a></p>
-            <p className="font-body">Email: <a href="mailto:info@PrimeCareRMCSolutions.com" className="text-teal">info@PrimeCareRMCSolutions.com</a></p>
-            <p className="font-body">Website: <a href="https://www.PrimeCareRMCSolutions.com" className="text-teal" target="_blank" rel="noreferrer">www.PrimeCareRMCSolutions.com</a></p>
+            <p className="font-body">Phone: <a href="tel:+923024133179" className="text-[var(--teal)]">+92-302-4133179</a></p>
+            <p className="font-body">Email: <a href="mailto:info@PrimeCareRMCSolutions.com" className="text-[var(--teal)]">info@PrimeCareRMCSolutions.com</a></p>
+            <p className="font-body">Website: <a href="https://www.PrimeCareRMCSolutions.com" className="text-[var(--teal)]" target="_blank" rel="noreferrer">www.PrimeCareRMCSolutions.com</a></p>
           </div>
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {footerLinks.map((item) => (
-            <Link key={item.href} href={item.href} className="font-body text-sm text-slate-300 transition hover:text-teal">
+            <Link key={item.href} href={item.href} className="font-body text-sm text-slate-300 transition hover:text-[var(--teal)]">
               {item.label}
             </Link>
           ))}
         </div>
       </div>
-      <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-500 font-body">
+      <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-slate-400 font-body">
         © {new Date().getFullYear()} PrimeCare RCM Solutions. All rights reserved.
       </div>
     </footer>
