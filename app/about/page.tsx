@@ -106,9 +106,9 @@ export default function AboutPage() {
             <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Presented by</p>
             <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)]">PrimeCare RCM Solutions is presented by M. Afnan.</h2>
           </div>
-          <a href="tel:+923024133179" className="button-teal">
+          <Link href="/contact" className="button-teal">
             Call Now
-          </a>
+          </Link>
         </div>
       </section>
     </main>

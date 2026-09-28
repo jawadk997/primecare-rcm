@@ -6,6 +6,7 @@ const footerLinks = [
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Why Choose Us', href: '/why-choose-us' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {

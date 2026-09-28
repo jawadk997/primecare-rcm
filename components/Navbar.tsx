@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { services } from '@/lib/services';
 
 const navItems = [
   { label: 'About', href: '/about' },
@@ -52,34 +51,25 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <div className="relative group">
-            <Link
-              href="/services"
-              className={cn(
-                'font-body text-sm transition hover:text-[var(--teal)]',
-                pathname?.startsWith('/services') ? 'text-[var(--teal)]' : 'text-[var(--navy)]'
-              )}
-            >
-              Our Services
-            </Link>
-            <div className="invisible absolute left-0 top-full z-40 mt-4 hidden min-w-[340px] overflow-hidden rounded-3xl border border-[var(--line)] bg-white p-5 shadow-[var(--shadow-soft)] transition duration-300 group-hover:block group-hover:visible">
-              <div className="grid gap-2 sm:grid-cols-2">
-                {services.map((service) => (
-                  <Link
-                    key={service.slug}
-                    href={`/services#${service.slug}`}
-                    className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3 text-sm text-[var(--navy)] transition hover:bg-[var(--teal-soft)] hover:text-[var(--teal)]"
-                  >
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
+          <Link
+            href="/services"
+            className={cn(
+              'font-body text-sm transition hover:text-[var(--teal)]',
+              pathname?.startsWith('/services') ? 'text-[var(--teal)]' : 'text-[var(--navy)]'
+            )}
+          >
+            Our Services
+          </Link>
 
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-[var(--teal)] px-5 py-2.5 text-sm font-semibold text-white shadow-[var(--shadow-soft)] transition hover:bg-[var(--teal-hover)] hover:text-white"
+          >
+            Contact Us
+          </Link>
           <a href="tel:+923024133179" className="font-body inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-[var(--navy)]">
             <Phone className="h-4 w-4 text-[var(--navy)]" />
             +92-302-4133179
@@ -101,25 +91,29 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 sm:px-8">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="font-body text-base text-[var(--navy)] transition hover:text-[var(--teal)]" onClick={() => setOpen(false)}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className="font-body text-base text-[var(--navy)] transition hover:text-[var(--teal)]"
+              onClick={() => setOpen(false)}
+            >
               {item.label}
             </Link>
           ))}
-          <div className="border-t border-[var(--line)] pt-4">
-            <p className="font-body text-xs uppercase tracking-[0.35em] text-[var(--navy)]">Services</p>
-            <div className="mt-3 grid gap-2">
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={`/services#${service.slug}`}
-                  className="font-body text-base text-[var(--navy)] transition hover:text-[var(--teal)]"
-                  onClick={() => setOpen(false)}
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <Link
+            href="/services"
+            className="font-body text-base text-[var(--navy)] transition hover:text-[var(--teal)]"
+            onClick={() => setOpen(false)}
+          >
+            Our Services
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full bg-[var(--teal)] px-5 py-3 text-base font-semibold text-white shadow-[var(--shadow-soft)] transition hover:bg-[var(--teal-hover)] hover:text-white"
+            onClick={() => setOpen(false)}
+          >
+            Contact Us
+          </Link>
           <div className="mt-4 flex flex-col gap-3 border-t border-[var(--line)] pt-4">
             <a href="tel:+923024133179" className="font-body text-sm text-[var(--navy)] hover:text-[var(--teal)]">+92-302-4133179</a>
           </div>
