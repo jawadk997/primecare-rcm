@@ -3,14 +3,14 @@ export const CONTACT_PHONE = '+92-302-4133179';
 
 export const contactServiceOptions = [
   'Credentialing',
+  'Patient Scheduling',
   'Coding',
+  'Prior Authorization / Eligibility Verification',
   'Charge Entry',
-  'Claims Submission',
+  'Patient Calling',
   'AR Follow Up',
-  'Denial Management',
   'Payment Posting',
-  'Patient Billing',
-  'QA & Audits',
+  'QA',
 ];
 
 export function normalizeServiceValue(value: string) {

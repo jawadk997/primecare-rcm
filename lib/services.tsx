@@ -38,6 +38,25 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
+    title: 'PATIENT SCHEDULING',
+    slug: 'patient-scheduling',
+    description:
+      'Efficient patient scheduling keeps visits organized, reduces no-shows, and supports smoother front-end revenue operations for healthcare practices.',
+    details:
+      'We support appointment coordination, provider calendars, intake checklists, and follow-up planning to keep patient flow consistent and clinic operations efficient.',
+    icon: (
+      <svg viewBox="0 0 64 64" {...iconProps}>
+        <rect x="14" y="16" width="36" height="34" rx="4" />
+        <path d="M22 12v8" />
+        <path d="M42 12v8" />
+        <path d="M14 26h36" />
+        <path d="M22 34h6" />
+        <path d="M32 34h8" />
+        <path d="M22 42h14" />
+      </svg>
+    ),
+  },
+  {
     title: 'CODING',
     slug: 'coding',
     description:
@@ -58,12 +77,29 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
+    title: 'PRIOR AUTHORIZATION / ELIGIBILITY VERIFICATION',
+    slug: 'prior-authorization-eligibility-verification',
+    description:
+      'We review coverage, verify patient eligibility, and manage prior authorization requests to reduce delays and improve claim approval rates before treatment.',
+    details:
+      'Our team confirms payer requirements, obtains necessary approvals, and checks service eligibility to help practices avoid avoidable denials and revenue disruption.',
+    icon: (
+      <svg viewBox="0 0 64 64" {...iconProps}>
+        <rect x="16" y="18" width="32" height="28" rx="4" />
+        <path d="M24 32h16" />
+        <path d="M32 24v16" />
+        <path d="M18 12h28" />
+        <path d="M18 52h28" />
+      </svg>
+    ),
+  },
+  {
     title: 'CHARGE ENTRY',
     slug: 'charge-entry',
     description:
-      'Charge Entry is an essential and crucial part of the whole billing process. If it is not being carried out meticulously the whole cycle may get disturbed and sometimes will likely have to start again.',
+      'Charge Entry is an essential and crucial part of the whole billing process. If it is not being carried out meticulously the whole cycle may get disturbed and sometimes will likely have to start again. Our claims submission team reviews each claim for accuracy before it is sent to the payors.',
     details:
-      'Our charge entry team validates every code, unit, and modifier so claims move forward quickly while protecting your practice from delayed or rejected submissions.',
+      'Our charge entry and claims submission team validates every code, unit, modifier, and demographic detail so claims move forward quickly while protecting your practice from delayed or rejected submissions.',
     icon: (
       <svg viewBox="0 0 64 64" {...iconProps}>
         <path d="M18 12h28v40H18z" />
@@ -73,24 +109,6 @@ export const services: ServiceDefinition[] = [
         <path d="M28 48l8-8l8 4" />
         <circle cx="46" cy="46" r="9" />
         <path d="M50 44l-8 8" />
-      </svg>
-    ),
-  },
-  {
-    title: 'CLAIMS SUBMISSION',
-    slug: 'claims-submission',
-    description:
-      'A dedicated team of expert professionals examines each claim for demographic, coding, submission errors prior to submission ensuring valid and accurate data is submitted to the Payors.',
-    details:
-      'We run claims through strict pre-submission checks, fix inconsistencies, and maintain payer compliance to reduce rejections from the start.',
-    icon: (
-      <svg viewBox="0 0 64 64" {...iconProps}>
-        <path d="M18 18h28v28H18z" />
-        <path d="M26 26h12" />
-        <path d="M26 34h12" />
-        <path d="M26 42h8" />
-        <path d="M22 22l8 8" />
-        <path d="M22 30l8-8" />
       </svg>
     ),
   },
@@ -112,18 +130,18 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
-    title: 'DENIAL MANAGEMENT',
-    slug: 'denial-management',
+    title: 'PATIENT CALLING',
+    slug: 'patient-calling',
     description:
-      'Our team has implemented an exhaustive and systematic approach for all underpaid, partially paid and the denied claims resulting in most of the claims being adjudicated timely with handsome reimbursements.',
+      'Our patient calling support improves follow-up communication, resolves billing questions, and helps drive timely collections after services are delivered.',
     details:
-      'We analyze provider denials, determine appeal strategies, and resubmit claims quickly to recover underpaid and denied amounts with maximum efficiency.',
+      'We handle patient outreach, statement follow-up, payment reminders, and account support to reduce backlog and improve patient engagement.',
     icon: (
       <svg viewBox="0 0 64 64" {...iconProps}>
-        <rect x="16" y="16" width="32" height="32" rx="4" />
-        <path d="M24 24l16 16" />
-        <path d="M40 24L24 40" />
-        <path d="M18 10h28" />
+        <path d="M24 18a8 8 0 0 1 16 0v28a8 8 0 0 1-16 0V18z" />
+        <path d="M20 28h24" />
+        <path d="M32 12v40" />
+        <path d="M28 48h8" />
         <path d="M18 54h28" />
       </svg>
     ),
@@ -147,25 +165,8 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
-    title: 'PATIENT BILLING',
-    slug: 'patient-billing',
-    description:
-      'We equip our client’s healthcare facilities with a designated patient advocate and customer service representatives that remain in contact with the patients after the delivery of the care.',
-    details:
-      'Our patient billing team supports statements, payment plans, and patient communication to improve collections without harming patient satisfaction.',
-    icon: (
-      <svg viewBox="0 0 64 64" {...iconProps}>
-        <path d="M32 12c-8.284 0-15 6.716-15 15a15 15 0 0 0 30 0c0-8.284-6.716-15-15-15z" />
-        <path d="M34 24h-4" />
-        <path d="M32 22v8" />
-        <path d="M28 42a10 10 0 0 1 8 0" />
-        <path d="M20 46c0 6.627 5.373 12 12 12s12-5.373 12-12" />
-      </svg>
-    ),
-  },
-  {
-    title: 'QA & AUDITS',
-    slug: 'qa-audits',
+    title: 'QA',
+    slug: 'qa',
     description:
       "Our dedicated analytics and reporting team analyzes the trends and ensures the implementation of a pre-defined reporting and transparency matrix depicting the real-time status of our clients' practice.",
     details:

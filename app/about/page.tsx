@@ -85,17 +85,22 @@ export default function AboutPage() {
       </section>
 
       <section id="careers" className="mx-auto max-w-7xl px-0 pt-16 sm:px-0">
-        <div className="glass-panel rounded-[2rem] border border-[var(--line)] bg-[var(--bg-panel)] p-10">
-          <p className="text-sm uppercase tracking-[0.35em] text-[var(--teal)]">Careers</p>
-          <h2 className="mt-4 text-3xl font-semibold text-[var(--navy)]">Join a team built for accuracy, accountability, and growth.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--text-muted)]">
+        <div className="rounded-[2rem] border border-[var(--line)] bg-[var(--bg-soft)] p-10 shadow-[var(--shadow-soft)] sm:p-12">
+          <p className="font-body text-sm uppercase tracking-[0.28em] text-[var(--teal)]">Careers</p>
+
+          <h2 className="mt-6 max-w-5xl font-heading text-[clamp(2.5rem,4vw,4rem)] font-semibold leading-[1.05] tracking-[-0.04em] text-[var(--navy)]">
+            Join a team built for accuracy, accountability, and growth.
+          </h2>
+
+          <p className="mt-6 max-w-5xl text-lg leading-8 text-[var(--text-muted)] sm:text-[1.125rem]">
             We are always looking for driven professionals in medical billing, coding, denial management, and revenue operations who want to make a meaningful impact for US healthcare practices.
           </p>
+
           <div className="mt-8 flex flex-wrap gap-4">
-            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Medical Coding</span>
-            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">AR Follow-Up</span>
-            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Denial Management</span>
-            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft)] px-4 py-2 text-sm text-[var(--navy)]">Operations</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft-strong)] px-5 py-2.5 text-base text-[var(--navy)]">Medical Coding</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft-strong)] px-5 py-2.5 text-base text-[var(--navy)]">AR Follow-Up</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft-strong)] px-5 py-2.5 text-base text-[var(--navy)]">Denial Management</span>
+            <span className="rounded-full border border-[var(--line)] bg-[var(--bg-soft-strong)] px-5 py-2.5 text-base text-[var(--navy)]">Operations</span>
           </div>
         </div>
       </section>

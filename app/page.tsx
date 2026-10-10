@@ -99,8 +99,8 @@ export default function HomePage() {
           <div className="mx-auto mt-4 h-1 w-24 rounded bg-teal" />
         </div>
 
-        <div className="mx-auto mt-10 max-w-7xl">
-          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-10 max-w-6xl">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
             {services.map((service, index) => (
               <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.05 }}>
                 <ServiceCard {...service} />
