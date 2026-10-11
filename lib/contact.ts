@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'primecarercm81@gmail.com';
+export const CONTACT_EMAIL = 'primecarercm.contact@gmail.com';
 export const CONTACT_PHONE = '+92-302-4133179';
 
 export const contactServiceOptions = [
