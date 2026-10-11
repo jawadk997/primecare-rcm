@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { Resend } from 'resend';
-import { CONTACT_EMAIL, contactServiceOptions, normalizeServiceValue } from '@/lib/contact';
+import { CONTACT_EMAIL, normalizeServiceValue, serviceOptions } from '@/lib/contact';
 
 const MAX_FIELD_LENGTH = 200;
 const MAX_MESSAGE_LENGTH = 2000;
@@ -60,7 +60,7 @@ export async function handleContactSubmission(request: NextRequest) {
     }
 
     const normalizedService = normalizeServiceValue(service);
-    const isKnownService = contactServiceOptions.some(
+    const isKnownService = serviceOptions.some(
       (option) => normalizeServiceValue(option) === normalizedService
     );
 

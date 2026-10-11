@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { normalizeServiceValue, serviceOptions } from './contact';
 
 export interface ServiceDefinition {
   title: string;
@@ -57,6 +58,23 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
+    title: 'PRIOR AUTHORIZATION / ELIGIBILITY VERIFICATION',
+    slug: 'prior-authorization-eligibility-verification',
+    description:
+      'We review coverage, verify patient eligibility, and manage prior authorization requests to reduce delays and improve claim approval rates before treatment.',
+    details:
+      'Our team confirms payer requirements, obtains necessary approvals, and checks service eligibility to help practices avoid avoidable denials and revenue disruption.',
+    icon: (
+      <svg viewBox="0 0 64 64" {...iconProps}>
+        <rect x="16" y="18" width="32" height="28" rx="4" />
+        <path d="M24 32h16" />
+        <path d="M32 24v16" />
+        <path d="M18 12h28" />
+        <path d="M18 52h28" />
+      </svg>
+    ),
+  },
+  {
     title: 'CODING',
     slug: 'coding',
     description:
@@ -77,25 +95,8 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
-    title: 'PRIOR AUTHORIZATION / ELIGIBILITY VERIFICATION',
-    slug: 'prior-authorization-eligibility-verification',
-    description:
-      'We review coverage, verify patient eligibility, and manage prior authorization requests to reduce delays and improve claim approval rates before treatment.',
-    details:
-      'Our team confirms payer requirements, obtains necessary approvals, and checks service eligibility to help practices avoid avoidable denials and revenue disruption.',
-    icon: (
-      <svg viewBox="0 0 64 64" {...iconProps}>
-        <rect x="16" y="18" width="32" height="28" rx="4" />
-        <path d="M24 32h16" />
-        <path d="M32 24v16" />
-        <path d="M18 12h28" />
-        <path d="M18 52h28" />
-      </svg>
-    ),
-  },
-  {
-    title: 'CHARGE ENTRY',
-    slug: 'charge-entry',
+    title: 'CHARGE ENTRY / SCRUBBING',
+    slug: 'charge-entry-scrubbing',
     description:
       'Charge Entry is an essential and crucial part of the whole billing process. If it is not being carried out meticulously the whole cycle may get disturbed and sometimes will likely have to start again. Our claims submission team reviews each claim for accuracy before it is sent to the payors.',
     details:
@@ -109,6 +110,42 @@ export const services: ServiceDefinition[] = [
         <path d="M28 48l8-8l8 4" />
         <circle cx="46" cy="46" r="9" />
         <path d="M50 44l-8 8" />
+      </svg>
+    ),
+  },
+  {
+    title: 'PAYMENT POSTING',
+    slug: 'payment-posting',
+    description:
+      "A dedicated team ensures all paper checks, ERAs and EFTs are reviewed daily and posted timely to give the day-to-day status of the cash inflow to our client’s so they know what's going on in their practice.",
+    details:
+      'We post payments accurately, reconcile cash receipts, and validate payer remittances so you get clear daily visibility on revenue inflow.',
+    icon: (
+      <svg viewBox="0 0 64 64" {...iconProps}>
+        <path d="M18 40h10v10H18z" />
+        <path d="M32 30h10v20H32z" />
+        <path d="M46 24h10v26H46z" />
+        <circle cx="46" cy="20" r="10" />
+        <path d="M42 20h8" />
+        <path d="M46 16v8" />
+      </svg>
+    ),
+  },
+  {
+    title: 'DENIAL MANAGEMENT',
+    slug: 'denial-management',
+    description:
+      'We identify denial trends, resolve claim issues, and manage appeals to recover revenue and prevent repeat denials.',
+    details:
+      'Our specialists review remittance advice, classify denial reasons, prepare appeals, and share payer insights to improve upstream workflows.',
+    icon: (
+      <svg viewBox="0 0 64 64" {...iconProps}>
+        <path d="M18 14h28a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V18a4 4 0 0 1 4-4z" />
+        <path d="M24 24h16" />
+        <path d="M24 32h10" />
+        <path d="M24 40h8" />
+        <path d="M42 38l8 8" />
+        <path d="M50 38l-8 8" />
       </svg>
     ),
   },
@@ -147,26 +184,8 @@ export const services: ServiceDefinition[] = [
     ),
   },
   {
-    title: 'PAYMENT POSTING',
-    slug: 'payment-posting',
-    description:
-      "A dedicated team ensures all paper checks, ERAs and EFTs are reviewed daily and posted timely to give the day-to-day status of the cash inflow to our client’s so they know what's going on in their practice.",
-    details:
-      'We post payments accurately, reconcile cash receipts, and validate payer remittances so you get clear daily visibility on revenue inflow.',
-    icon: (
-      <svg viewBox="0 0 64 64" {...iconProps}>
-        <path d="M18 40h10v10H18z" />
-        <path d="M32 30h10v20H32z" />
-        <path d="M46 24h10v26H46z" />
-        <circle cx="46" cy="20" r="10" />
-        <path d="M42 20h8" />
-        <path d="M46 16v8" />
-      </svg>
-    ),
-  },
-  {
-    title: 'QA',
-    slug: 'qa',
+    title: 'QUALITY ASSURANCE',
+    slug: 'quality-assurance',
     description:
       "Our dedicated analytics and reporting team analyzes the trends and ensures the implementation of a pre-defined reporting and transparency matrix depicting the real-time status of our clients' practice.",
     details:
@@ -182,3 +201,11 @@ export const services: ServiceDefinition[] = [
   },
 
 ];
+
+const serviceOrder = new Map(serviceOptions.map((option, index) => [normalizeServiceValue(option), index]));
+
+services.sort((first, second) => {
+  const firstOrder = serviceOrder.get(normalizeServiceValue(first.title)) ?? Number.MAX_SAFE_INTEGER;
+  const secondOrder = serviceOrder.get(normalizeServiceValue(second.title)) ?? Number.MAX_SAFE_INTEGER;
+  return firstOrder - secondOrder;
+});

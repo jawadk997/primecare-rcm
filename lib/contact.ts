@@ -1,16 +1,17 @@
 export const CONTACT_EMAIL = 'primecarercm.contact@gmail.com';
 export const CONTACT_PHONE = '+92-302-4133179';
 
-export const contactServiceOptions = [
+export const serviceOptions = [
   'Credentialing',
   'Patient Scheduling',
-  'Coding',
   'Prior Authorization / Eligibility Verification',
-  'Charge Entry',
-  'Patient Calling',
-  'AR Follow Up',
+  'Coding',
+  'Charge Entry / Scrubbing',
   'Payment Posting',
-  'QA',
+  'Denial Management',
+  'AR Follow Up',
+  'Patient Calling',
+  'Quality Assurance',
 ];
 
 export function normalizeServiceValue(value: string) {
@@ -34,7 +35,7 @@ export function resolveServiceOption(value: string | null): string | null {
     return null;
   }
 
-  const exactMatch = contactServiceOptions.find(
+  const exactMatch = serviceOptions.find(
     (option) => normalizeServiceValue(option) === normalized
   );
 

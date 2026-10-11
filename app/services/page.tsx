@@ -11,7 +11,7 @@ export default function ServicesPage() {
       <section className="mx-auto max-w-7xl text-center">
         <p className="font-body text-sm uppercase tracking-[0.3em] text-teal">OUR SERVICES</p>
         <h1 className="mt-4 font-heading text-3xl font-semibold leading-tight text-[var(--navy)] sm:text-4xl">Complete Revenue Cycle Management Solutions</h1>
-        <p className="mt-4 font-body text-sm leading-7 text-[var(--text-muted)]">From credentialing to payment posting — we handle every step of your billing workflow.</p>
+        <p className="mt-4 font-body text-sm leading-7 text-[var(--text-muted)]">From credentialing through quality assurance, we support every step of your billing workflow.</p>
 
         <div className="mx-auto mt-10 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2">
           {services.map((service, index) => (

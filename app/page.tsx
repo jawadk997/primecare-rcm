@@ -8,6 +8,7 @@ import ServiceCard from '@/components/ServiceCard';
 import SectionHeading from '@/components/SectionHeading';
 import StatsBar from '@/components/StatsBar';
 import ProcessFlow from '@/components/ProcessFlow';
+import { serviceOptions } from '@/lib/contact';
 import { services } from '@/lib/services';
 
 const specialties = [
@@ -27,16 +28,7 @@ const benefits = [
   { title: 'Transparent Reporting', description: 'Daily dashboards, KPI tracking, and clear revenue visibility.' },
 ];
 
-const processSteps = [
-  'Patient Registration',
-  'Insurance Verification',
-  'Medical Coding',
-  'Claim Submission',
-  'Payment Posting',
-  'AR Follow-up',
-  'Denial Management',
-  'Final Reimbursement',
-];
+const processSteps = serviceOptions;
 
 export default function HomePage() {
   return (
@@ -95,7 +87,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-3xl">
           <p className="font-body text-sm uppercase tracking-[0.3em] text-teal">OUR SERVICES</p>
           <h2 className="mt-4 font-heading text-3xl font-semibold leading-tight text-[var(--navy)] sm:text-4xl">Complete Revenue Cycle Management Solutions</h2>
-          <p className="mt-4 font-body text-sm leading-7 text-[var(--text-muted)]">From credentialing to payment posting — we handle every step of your billing workflow.</p>
+          <p className="mt-4 font-body text-sm leading-7 text-[var(--text-muted)]">From credentialing through quality assurance, we support every step of your billing workflow.</p>
           <div className="mx-auto mt-4 h-1 w-24 rounded bg-teal" />
         </div>
 
@@ -147,7 +139,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-16 sm:px-8">
-        <SectionHeading title="Revenue Cycle Process" description="An 8-step flow that keeps claims moving and revenue growing." />
+        <SectionHeading title="Revenue Cycle Process" description="A 10-step flow that keeps claims moving and revenue growing." />
         <ProcessFlow steps={processSteps} />
       </section>
 

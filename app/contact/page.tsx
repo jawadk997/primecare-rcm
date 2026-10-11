@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useMemo, useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
-import { CONTACT_EMAIL, CONTACT_PHONE, contactServiceOptions, resolveServiceOption } from '@/lib/contact';
+import { CONTACT_EMAIL, CONTACT_PHONE, resolveServiceOption, serviceOptions } from '@/lib/contact';
 
 const initialForm = {
   name: '',
@@ -264,7 +264,7 @@ function ContactFormContent() {
                   aria-describedby={errors.service ? 'service-error' : undefined}
                 >
                   <option value="">Select a service</option>
-                  {contactServiceOptions.map((option) => (
+                  {serviceOptions.map((option) => (
                     <option key={option} value={option}>
                       {option}
                     </option>
